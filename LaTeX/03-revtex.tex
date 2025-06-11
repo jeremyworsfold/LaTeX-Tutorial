@@ -1,0 +1,134 @@
+\documentclass[%
+ reprint,
+ pre,
+ amsmath,amssymb,
+ aps,
+ %onecolumn
+]{revtex4-2}
+
+\usepackage{microtype}
+\usepackage{bm}
+\usepackage{lipsum}
+\usepackage{dcolumn}
+\usepackage{siunitx}
+\usepackage{physics}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{cleveref}
+\hypersetup{
+    %colorlinks=true, % allows clicking on references within text 
+    %linkcolor=blue, % make sure you remove the hidelinks option in hyprerref if you want color links
+    pdftitle={LaTeX Introduction},
+}
+
+\usepackage{natbib}
+\bibliographystyle{apsrev4-2}
+
+
+\begin{document}
+
+\title{RevTex example}
+
+\author{Jeremy Worsfold}
+\email{j.worsfold@unsw.edu.au}
+\affiliation{
+    School of Physics,
+    University of New South Wales - Sydney 2052, Australia
+}
+
+\date{\today}
+
+\begin{abstract}
+\lipsum[1]
+
+\end{abstract}
+
+
+\maketitle
+
+
+\section{Introduction}
+\label{sec:intro}
+
+\lipsum
+
+\section{Tables and figures}
+
+You can force tables and figures to be in specific areas using the \texttt{[h]} option but generally, I think it's best to let the compiler find where it should go.
+Other options include \texttt{[t]} for top of the page, or \texttt{[b]} for bottom of the page. Usually in journals like APS, figures go at the top.
+You can also just move it about in the text to move the figure/table onto another page. But make sure it's close or directly after being referred to in the text.
+
+\begin{table}
+    \centering
+    \begin{tabular}{cccc}
+         Col 1 (\unit{\newton\meter})& Col 2  & Col 3  & Col 4 \\
+         \colrule
+         1 & 2 & 3 & 4 \\
+         5 & 6 & 7 & 8 \\
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:my_label}
+\end{table}
+
+\begin{table}
+\begin{ruledtabular}
+\begin{tabular}{lcdr}
+    Left & Centered & \multicolumn{1}{c}{Decimal} & Right\\
+    \colrule
+    1 & 2 & 3.001 & 4 \\
+    10 & 20 & 30 & 40 \\
+    100 & 200 & 300.0 & 400 \\
+\end{tabular}
+\end{ruledtabular}
+\caption{An example table}
+\label{tab:table1}
+\end{table}
+
+
+\section{Other Packages}
+
+
+\subsection{SI units}
+
+An example use of units $\SI{52.3}{\newton}=\SI{52.3}{\kg\per\meter\squared}$.
+
+\subsection{physics package}
+
+\begin{equation}
+    \int_{-\infty}^\infty e^{-x^2} d x = \sqrt{\pi} \label{eq:gaussInt}
+\end{equation}
+
+\begin{equation}
+    \int_{-\infty}^\infty e^{-x^2} \dd x = \sqrt{\pi}
+\end{equation}
+
+\begin{equation}
+    \frac{\partial^2u}{\partial x^2} = \pdv[2]{u}{x} \label{eq:partialDiffExample}
+\end{equation}
+
+\section{referencing text}
+\label{sec:ref}
+
+This is a reference to Section \ref{sec:intro}. This is a neater reference to \cref{sec:intro} or \Cref{sec:intro}.
+It also works for equations such as \cref{eq:gaussInt}, as opposed to Eq. \eqref{eq:gaussInt}.
+However, if you directly mention that the thing you're referring to is an equation, ODE, PDE etc, then it's probably better practice to just give the equation number. 
+For example, substituting \cref{eq:gaussInt} into the PDE \eqref{eq:gaussInt} and simplifying, we obtain...
+
+\subsection{Citations}
+
+I recommend you use \texttt{natbib} to do referencing, this works well with the \texttt{revtex} documentclass which also comes with a bibliography style. 
+In this `vancouver' referencing style, you only refer using a number so the only command you really need is \texttt{cite}. For instance, this is a nod to a great mathematician \cite{turing1990chemical}. 
+Citing multiple sources at the same time just requires separating each key with commas.
+
+% should have the bibliography before the appendices generally.
+\bibliography{ref}
+
+\appendix
+
+\section{First appendix}
+The numbering of equations and sections changes after the appendix
+\begin{equation}
+    e^{i\pi}\equiv-1.
+\end{equation}
+
+\end{document}

@@ -1,0 +1,83 @@
+\documentclass[11pt, a4paper, oneside]{memoir}
+
+\setlrmarginsandblock{0.15\paperwidth}{*}{1}
+\setulmarginsandblock{0.15\paperwidth}{*}{1}
+\setheadfoot{\onelineskip}{4\onelineskip}
+\setheaderspaces{*}{2\onelineskip}{*}
+\checkandfixthelayout
+
+
+\usepackage{lipsum}
+\usepackage{kpfonts} % nice font
+% other nice fonts IMO
+%\usepackage{newpxtext,newpxmath}
+%\let\Bbbk\relax
+% MATHS PACKAGES
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{physics}
+
+% GRAPHICS
+
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{microtype}
+
+% REFERENCES 
+
+\usepackage[sort&compress]{natbib}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+\hypersetup{
+    breaklinks=true,
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=violet,
+    urlcolor=cyan,
+    pdftitle={Optional pdf title in metadata},
+    bookmarksopenlevel=2
+}
+
+% CHAPTER AND SECTION HEADINGS
+
+\chapterstyle{dash}
+\setsecheadstyle{\Large}
+\setsubsecheadstyle{\large\itshape}
+\setsecnumdepth{subsection}
+
+% HEADERS AND FOOTERS
+
+\usepackage[ddmmyy]{datetime}
+\nouppercaseheads
+\makepagestyle{mystyle} 
+\makeoddhead{mystyle}{}{}{\itshape\rightmark} 
+\makeatletter
+\makeoddfoot{mystyle}{\itshape{\@author}}{\thepage}{\@date} 
+\makeatother
+
+% DOCUMENT
+
+\begin{document}
+
+\author{J. Worsfold}
+\date{\today}
+\title{An example using the memoir documentclass}
+\pagestyle{mystyle}
+
+\maketitle
+
+\chapter{Introduction}
+
+A nod to a great mathematician \cite{turing1990chemical}.
+
+\lipsum
+
+
+\bibliographystyle{alpha}
+\bibliography{ref}
+
+
+\end{document}
