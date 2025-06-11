@@ -20,12 +20,32 @@ A new line doesn't do anything really but it helps you see your text easier and 
 I like to start a new line for each sentence.
 
 A blank line, however, does start a new paragraph. You can force line breaks with double backslashes but I wouldn't advise this. 
-Be careful with some special characters when typing such as ampersands, percentage, dollar, at symbol etc. To show these as text, use a backslash before: \%, \$, \&, \$. But these shouldn't come up regularly anyway.
+Be careful with some special characters when typing such as ampersands, percentage, dollar, at symbol etc. 
+To show these as text, use a \textbackslash\; before: \%, \$, \&, \$. 
+But these shouldn't come up regularly anyway.
 For single quotation marks, use `at the start and' at the end. For double quotes, use ``and''. 
 If you didn't, the left one would look "weird".
 
+\begingroup
+\setlength{\parskip}{1em}
+I can change things like the spacing between paragraphs using \texttt{setlength}.
+\texttt{1em} sets the spacing to one uppercase character's height. 
+\texttt{begingroup} and \texttt{endgroup} define a region where the changes are localized. If we didn't have these, the changes would be applied everywhere after this point.
 
-\section{Typsetting maths}
+For figures, I use \texttt{.pdf} where possible (vector graphics instead of rasterized). It's also ok to use \texttt{.eps} (gets converted to \texttt{.pdf}), \texttt{.png}, potentially others like  \texttt{.jpeg}.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{temperature_scales.png}
+    \caption{Make sure you write a caption.}
+    \label{fig:temp-scales}
+\end{figure}
+
+\endgroup
+
+
+
+
+\section{Typesetting maths}
 
 You can add maths inline using $x=mx + b$, or \(x=mx+b\). You can put it on its own line using 
 \[
@@ -62,12 +82,5 @@ Using \texttt{equation, aligned}:
     & = 1-2\cos^2(\theta).
 \end{aligned}
 \end{equation}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\linewidth]{temperature_scales.png}
-    \caption{Caption}
-    \label{fig:temp-scales}
-\end{figure}
 
 \end{document}

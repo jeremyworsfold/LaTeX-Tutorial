@@ -1,8 +1,7 @@
-\documentclass[%
- reprint,
- pre,
- amsmath,amssymb,
- aps,
+\documentclass[
+ reprint, %preprint for single col, double spacing
+ pre, % others journal styles: pra, prl, etc
+ amsmath, amssymb, aps, % preload maths packages
  %onecolumn
 ]{revtex4-2}
 
@@ -22,7 +21,8 @@
 }
 
 \usepackage{natbib}
-\bibliographystyle{apsrev4-2}
+%\bibliographystyle{apsrev4-2}
+\bibliographystyle{unsrt}
 
 
 \begin{document}
@@ -118,7 +118,11 @@ For example, substituting \cref{eq:gaussInt} into the PDE \eqref{eq:gaussInt} an
 
 I recommend you use \texttt{natbib} to do referencing, this works well with the \texttt{revtex} documentclass which also comes with a bibliography style. 
 In this `vancouver' referencing style, you only refer using a number so the only command you really need is \texttt{cite}. For instance, this is a nod to a great mathematician \cite{turing1990chemical}. 
-Citing multiple sources at the same time just requires separating each key with commas.
+Citing multiple sources at the same time just requires separating each key with commas \cite{turing1990chemical,cooley1967fft}.
+
+Give your entries in the bibliography useful keys and try to keep to a convention, e.g. \texttt{<lead author><date><first word of title>}.
+Reference managers (and google scholar) will automatically do things like this. Wrapping text with \{ \} brackets ensures words stay capitalized.
+
 
 % should have the bibliography before the appendices generally.
 \bibliography{ref}

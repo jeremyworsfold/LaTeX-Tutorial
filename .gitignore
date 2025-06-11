@@ -3,4 +3,12 @@
 .vscode
 
 
-**/out
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.out
+*Notes.bib

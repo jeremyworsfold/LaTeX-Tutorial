@@ -32,7 +32,7 @@
 %bibnotes,
  amsmath,amssymb,
  aps,
-%pra,
+ pra,
 %prb,
 %rmp,
 %prstab,
@@ -40,9 +40,13 @@
 %floatfix,
 ]{revtex4-2}
 
+
 \usepackage{graphicx}% Include figure files
+\graphicspath{{./figures}}
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
+\usepackage{natbib}
+\bibliographystyle{apsrev4-2}
 %\usepackage{hyperref}% add hypertext capabilities
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
@@ -71,7 +75,8 @@
  This line break forced with \textbackslash\textbackslash
 }%
 
-\collaboration{MUSO Collaboration}%\noaffiliation
+\collaboration{MUSO Collaboration}
+\noaffiliation
 
 \author{Charlie Author}
  \homepage{http://www.Second.institution.edu/~Charlie.Author}
@@ -160,6 +165,7 @@ Because REV\TeX\ uses the \verb+natbib+ package of Patrick Daly,
 the entire repertoire of commands in that package are available for your document;
 see the \verb+natbib+ documentation for further details. Please note that
 REV\TeX\ requires version 8.31a or later of \verb+natbib+.
+\cite{Bire82}
 
 \paragraph{Syntax}
 The argument of \verb+\cite+ may be a single \emph{key}, 

@@ -1,4 +1,12 @@
-# LaTeX Introduction
+## LaTeX Introduction
+
+<img src="qr-link.png" alt="isolated" width="400"/>
+
+https://github.com/jeremyworsfold/LaTeX-Tutorial
+
+---
+
+## Other resources
 
 [Overleaf LaTeX introduction](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
 
@@ -16,7 +24,9 @@
 
 ## Get familiar with Overleaf
 
-Makes starting out a lot easier. Use toolbar or tab complete for:
+Makes starting out a lot easier (easier to see and correct errors)
+
+Use toolbar or tab complete for:
 - figures
 - symbols
 - tables
@@ -41,11 +51,17 @@ Always start by declaring what document class you are using.
 
 I recommend using `natbib`
 
+Make sure you set the `\bibliographystyle{}`, then have `\bibliography{name}` at the end, generally before any appendices
+
+Reference managers can help with `.bib` files but always check them
+
+**Tip: wrapping text with {} brackets ensures words stay capitalized**
+
 ---
 
 ### Packages
 
-- **`physics`:** Useful for mathematics typesetting, e.g. intergrals and partial derivatives
+- **`physics`:** Useful for mathematics typesetting, e.g. integrals and partial derivatives
 - **`cleveref`**: Automatic addition of "Section", "Appendix", "eq." etc
 - **`microtype`**: Adjusts spacing of characters slightly to avoid awkward line breaks
 - **`mathtools`**: for more niche symbols
