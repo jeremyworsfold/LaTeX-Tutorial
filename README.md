@@ -10,7 +10,7 @@ copy and paste the `.tex` files in LaTeX directory into **www.overleaf.com**
 
 ## Other resources
 
-If you've never used LaTeX before definitely take a look at this:
+If you've never used LaTeX before definitely take a look at this: 
 [Overleaf LaTeX introduction](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
 
 The examples 04 and 05 come from here:
