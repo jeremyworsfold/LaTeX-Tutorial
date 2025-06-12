@@ -18,6 +18,7 @@ copy and paste the `.tex` files in LaTeX directory into **www.overleaf.com**
 
 ## A minimal working example
 
+See `01-mwe.tex` to learn about LaTeX commands and how to input:
 - Paragraphs
 - Equations
 - Figures
@@ -42,11 +43,17 @@ Use toolbar or tab complete for:
 
 ## LaTeX exists outside of Overleaf!
 
+You can download LaTeX (MikTex, TeXLive) to your computer and run it locally using tools like:
+- VSCode with LaTeXWorkshop extension
+- LaTeXWorksop
+- TeXShop
+
 ---
 
 
 ## Columns and margins
 
+See `02-columns.tex` for:
 - `twocolumn` document class option
 - `geometry` package for margins
 
@@ -54,11 +61,13 @@ Use toolbar or tab complete for:
 
 ## Document classes
 
-Always start by declaring what document class you are using.
+Other documentclasses give you different things out-of-the-box:
 - `article`: Standard and default
 - `revtex4-2`: used by the American Physics Society (APS) journals and others. *Might* be exactly the style your lecturers are used to and want you to produce
 - `book`: longer format with `\chapter{}` defined
 - `memoir`: similarly long format, higher learning curve but nice aesthetics
+
+**Take a look at the `03-revtex.tex` example**
 
 ---
 
@@ -76,6 +85,11 @@ Reference managers can help with `.bib` files but always check them
 
 ## Report Structure
 
+What should go in the:
+- introduction
+- abstract
+- discussion/conclusions
+
 ---
 
 **Introduction**
@@ -91,7 +105,7 @@ context, need, task, object, *implication*
 
 ---
 
-### Packages
+### Other Packages
 
 - **`physics`:** Useful for mathematics typesetting, e.g. integrals and partial derivatives
 - **`cleveref`**: Automatic addition of "Section", "Appendix", "eq." etc
