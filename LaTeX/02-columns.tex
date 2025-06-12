@@ -1,3 +1,5 @@
+% commands often have optional arguments that can be set using square brackets and keywords
+% this sets the font size to be 11, a4 paper size, and the text in two columns
 \documentclass[11pt, a4paper, twocolumn]{article}
 
 
@@ -5,7 +7,9 @@
 \usepackage{lipsum}
 \usepackage{amsmath}
 
-% \usepackage[margin=2.5cm]{geometry}
+% the geometry package allows us to set the margins manually
+% \usepackage[margin=2.5cm]{geometry} % set them uniformly
+% or set each one independently
 \usepackage[
     top=2cm,
     left=2cm,
@@ -13,6 +17,8 @@
     bottom=2cm,
 ]{geometry}
 
+
+% the rest of this example is the sme as 01-mwe.tex
 
 \title{LaTeX Tutorial}
 \author{Jeremy Worsfold}
@@ -36,7 +42,7 @@ For single quotation marks, use `at the start and' at the end. For double quotes
 If you didn't, the left one would look "weird".
 
 
-\section{Typsetting maths}
+\section{Typesetting maths}
 
 You can add maths inline using $x=mx + b$, or \(x=mx+b\). You can put it on its own line using 
 \[
