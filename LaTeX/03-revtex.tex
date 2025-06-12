@@ -1,6 +1,6 @@
 \documentclass[
  reprint, %preprint for single col, double spacing
- pre, % others journal styles: pra, prl, etc
+ %pre, % others journal styles: pra, prl, etc
  amsmath, amssymb, aps, % preload maths packages
  a4paper,
  %onecolumn
@@ -13,20 +13,22 @@
 \usepackage{siunitx}
 \usepackage{physics}
 
-\usepackage[hidelinks]{hyperref}
-\usepackage{cleveref}
-\hypersetup{
-    %colorlinks=true, % allows clicking on references within text 
-    %linkcolor=blue, % make sure you remove the hidelinks option in hyprerref if you want color links
-    pdftitle={LaTeX Introduction},
-}
+\usepackage{graphicx}
+\usepackage{subfigure}
 
 \usepackage{natbib}
-\bibliographystyle{unsrt}
-% \bibliographystyle{unsrtnat}
-% \bibliographystyle{siam}
-% \bibliographystyle{apsrev4-2}
+% the style you should use will depend on what is expected. 
+% Imagine they want:
+% numbered, square brackets for the citations
+% name of authors, article title, journal name, and DOI if available
+\bibliographystyle{unsrtnat}
+%\bibliographystyle{unsrt}
+%\bibliographystyle{siam}
+%\bibliographystyle{apsrev4-2}
 
+% revtex already loads hyperref but explicit import is needed to make cleveref work
+\usepackage[hidelinks]{hyperref}
+\usepackage{cleveref}
 
 \begin{document}
 
@@ -125,6 +127,17 @@ Citing multiple sources at the same time just requires separating each key with 
 
 Give your entries in the bibliography useful keys and try to keep to a convention, e.g. \texttt{<lead author><date><first word of title>}.
 Reference managers (and google scholar) will automatically do things like this. Wrapping text with \{ \} brackets ensures words stay capitalized.
+
+
+\begin{figure*}
+    \centering
+    \subfigure{\includegraphics[width=8.6cm]{figures/fig_1.eps}}
+    \hfill
+    \subfigure{\includegraphics[width=8.6cm]{figures/fig_1.eps}}
+    \caption{An example of sub-figures}
+    \label{fig:PDMP}
+\end{figure*}
+
 
 
 % should have the bibliography before the appendices generally.

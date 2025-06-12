@@ -20,6 +20,9 @@ https://github.com/jeremyworsfold/LaTeX-Tutorial
 - Equations
 - Figures
 
+
+**Have a go for yourself!**
+
 ---
 
 ## Get familiar with Overleaf
@@ -31,9 +34,17 @@ Use toolbar or tab complete for:
 - symbols
 - tables
 
+**Look around at the tools available**
+
 ---
 
+## LaTeX exists outside of Overleaf!
+
+---
+
+
 ## Columns and margins
+
 - `twocolumn` document class option
 - `geometry` package for margins
 

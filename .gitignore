@@ -1,7 +1,7 @@
 *.css
 *.scss
 .vscode
-
+.DS_store
 
 *.aux
 *.log
