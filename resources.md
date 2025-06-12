@@ -34,6 +34,8 @@ Use toolbar or tab complete for:
 ---
 
 ## Columns and margins
+- `twocolumn` document class option
+- `geometry` package for margins
 
 ---
 
@@ -41,7 +43,7 @@ Use toolbar or tab complete for:
 
 Always start by declaring what document class you are using.
 - `article`: Standard and default
-- `revtex4-2`: version 4.2 of RevTex used by the American Physics Society (APS) journals and others. Probably the best for lab reports in two columns and might be exactly the style your lecturers are used to and want you to produce
+- `revtex4-2`: used by the American Physics Society (APS) journals and others. *Might* be exactly the style your lecturers are used to and want you to produce
 - `book`: longer format with `\chapter{}` defined
 - `memoir`: similarly long format, higher learning curve but nice aesthetics
 
@@ -56,6 +58,21 @@ Make sure you set the `\bibliographystyle{}`, then have `\bibliography{name}` at
 Reference managers can help with `.bib` files but always check them
 
 **Tip: wrapping text with {} brackets ensures words stay capitalized**
+
+---
+
+## Report Structure
+
+**Introduction**
+- **context**: what is the subject of the paper and what's been done previously? Why is this interesting in Physics?
+- **need**: why was this experiment necessary?
+- **task**: what have you done?
+- **object**: preview the paper
+
+**Abstract**
+
+context, need, task, object, *implication*
+
 
 ---
 
