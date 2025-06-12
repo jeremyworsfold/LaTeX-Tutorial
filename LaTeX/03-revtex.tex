@@ -14,7 +14,11 @@
 \usepackage{physics}
 
 \usepackage{graphicx}
-\usepackage{subfigure}
+% be careful here. I often get errors when using packages like 
+% subfig, subfigure, subcaption
+% they often break or give weird warnings when using with hyperref
+%\usepackage{subfigure}
+\usepackage{subfig}
 
 \usepackage{natbib}
 % the style you should use will depend on what is expected. 
@@ -118,6 +122,7 @@ This is a reference to Section \ref{sec:intro}. This is a neater reference to \c
 It also works for equations such as \cref{eq:gaussInt}, as opposed to Eq. \eqref{eq:gaussInt}.
 However, if you directly mention that the thing you're referring to is an equation, ODE, PDE etc, then it's probably better practice to just give the equation number. 
 For example, substituting \cref{eq:gaussInt} into the PDE \eqref{eq:gaussInt} and simplifying, we obtain...
+You can also reference figures like \cref{fig:doublefig} or by sub figure: \cref{subfig:a}.
 
 \subsection{Citations}
 
@@ -129,16 +134,27 @@ Give your entries in the bibliography useful keys and try to keep to a conventio
 Reference managers (and google scholar) will automatically do things like this. Wrapping text with \{ \} brackets ensures words stay capitalized.
 
 
-\begin{figure*}
+\begin{figure*} % make it full page width
     \centering
-    \subfigure{\includegraphics[width=8.6cm]{figures/fig_1.eps}}
+    \subfloat{\includegraphics[width=8.6cm]{figures/fig_1.eps}}
     \hfill
-    \subfigure{\includegraphics[width=8.6cm]{figures/fig_1.eps}}
+    \subfloat{\includegraphics[width=8.6cm]{figures/fig_1.eps}}
     \caption{An example of sub-figures}
-    \label{fig:PDMP}
+    \label{fig:doublefig}
 \end{figure*}
 
-
+\begin{figure*}
+    \centering
+    \subfloat[\label{subfig:a}]{%
+        \includegraphics[width=0.3\linewidth]{figures/fig_1-eps-converted-to.pdf}%
+    }
+    \hfil
+    \subfloat[\label{subfig:b}]{%
+        \includegraphics[width=0.3\linewidth]{figures/fig_1-eps-converted-to.pdf}%
+    }
+    \caption{A graphical depiction of the setup}
+    \label{fig:subfigureExample}
+\end{figure*}
 
 % should have the bibliography before the appendices generally.
 \bibliography{ref}
