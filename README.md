@@ -1,3 +1,12 @@
+# An fast introduction to LaTeX
+
+This repository quickly goes over the key things you might need to write a lab report in LaTeX.
+It goes at a faster pace than most introductions because it is designed for a range of familiarity with LaTeX (and was written to fit into a 1.5 hour workshop). If you struggle to understand what's going on, there are more carefully curated introductions in the resources below.
+
+The primary goal is to give you the tools to put together aesthetic and robust lab reports with minimal extra formatting required. I'll go over useful tips and packages I use and there's also a `.pdf` that can help you improve the written content too.
+
+LaTeX is incredibly powerful but can also feel overwhelming at first. I recommend using [Overleaf](https://www.overleaf.com) for beginners because of its shortcuts, highlighting and toolbar that with help you get started.
+
 ## LaTeX Introduction
 
 <img src="qr-link.png" width="300"/>
