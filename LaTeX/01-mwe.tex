@@ -1,19 +1,43 @@
-\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Preamble
+
+% The preamble does a few things:
+% - Defines the type of document we want to make.
+% - Loads packages which give extra tools to do things like add figures or type niche symbols
+% - We can also set our own formatting rules that will be used in the main document
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article} % define the type of document. the `article' class is just about the most basic type.
 
 \usepackage{graphicx} % Required for inserting images
-\graphicspath{{./figures/}} % optional
+\graphicspath{{./figures/}} % optional, tells LaTeX to look for images in the `figures' directory
 
 \usepackage{amsmath} % useful for writing maths
 
+% These are used by the \maketitle command to put in a title page/section
 \title{LaTeX Tutorial}
 \author{Jeremy Worsfold}
 \date{\today}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Main body
+
+% Everything in between the \begin{document} ... \end{document} commands will be put into the document in some way
+% Here we write text, equations, load figures, put bibliographies and appendices
+% We can use LaTeX's default commands and the ones provided by the document class and packages we loaded from the preamble
+% Anything with a backslash is a command 
+% Anything in the form \begin{...} \end{...} is called an environment
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 \maketitle
 
-\section{Introduction}
+\section{Introduction} % the section command creates a new numbered heading 
+
+\subsection{Smaller title} % we can also created subheadings
 
 I can type sentences and paragraphs just by typing.
 A new line doesn't do anything really but it helps you see your text easier and track changes better.
@@ -26,7 +50,9 @@ But these shouldn't come up regularly anyway.
 For single quotation marks, use `at the start and' at the end. For double quotes, use ``and''. 
 If you didn't, the left one would look "weird".
 
-\begingroup
+
+\begingroup % the \begingroup \endgroup means commands like \setlength are only changed for content within 
+
 \setlength{\parskip}{1em}
 I can change things like the spacing between paragraphs using \texttt{setlength}.
 \texttt{1em} sets the spacing to one uppercase character's height. 

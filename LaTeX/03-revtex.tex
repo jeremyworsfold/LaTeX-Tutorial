@@ -25,10 +25,10 @@
 % Imagine they want:
 % numbered, square brackets for the citations
 % name of authors, article title, journal name, and DOI if available
-\bibliographystyle{unsrtnat}
+%\bibliographystyle{unsrtnat}
 %\bibliographystyle{unsrt}
 %\bibliographystyle{siam}
-%\bibliographystyle{apsrev4-2}
+\bibliographystyle{apsrev4-2}
 
 % revtex already loads hyperref but explicit import is needed to make cleveref work
 \usepackage[hidelinks]{hyperref}
@@ -67,7 +67,7 @@ You can force tables and figures to be in specific areas using the \texttt{[h]} 
 Other options include \texttt{[t]} for top of the page, or \texttt{[b]} for bottom of the page. Usually in journals like APS, figures go at the top.
 You can also just move it about in the text to move the figure/table onto another page. But make sure it's close or directly after being referred to in the text.
 
-\begin{table}
+\begin{table}[h]
     \centering
     \begin{tabular}{cccc}
          Col 1 (\unit{\newton\meter})& Col 2  & Col 3  & Col 4 \\
@@ -79,18 +79,18 @@ You can also just move it about in the text to move the figure/table onto anothe
     \label{tab:my_label}
 \end{table}
 
-\begin{table}
-\begin{ruledtabular}
-\begin{tabular}{lcdr}
-    Left & Centered & \multicolumn{1}{c}{Decimal} & Right\\
-    \colrule
-    1 & 2 & 3.001 & 4 \\
-    10 & 20 & 30 & 40 \\
-    100 & 200 & 300.0 & 400 \\
-\end{tabular}
-\end{ruledtabular}
-\caption{An example table}
-\label{tab:table1}
+\begin{table}[h]
+    \begin{ruledtabular}
+    \begin{tabular}{lcdr}
+        Left & Centered & \multicolumn{1}{c}{Decimal} & Right\\
+        \colrule
+        1 & 2 & 3.001 & 4 \\
+        10 & 20 & 30 & 40 \\
+        100 & 200 & 300.0 & 400 \\
+    \end{tabular}
+    \end{ruledtabular}
+    \caption{An example table}
+    \label{tab:table1}
 \end{table}
 
 
@@ -98,11 +98,11 @@ You can also just move it about in the text to move the figure/table onto anothe
 
 
 \subsection{SI units}
-
+%\usepackage{siunitx}
 An example use of units $\SI{52.3}{\newton}=\SI{52.3}{\kg\per\meter\squared}$.
 
 \subsection{physics package}
-
+\newpage
 \begin{equation}
     \int_{-\infty}^\infty e^{-x^2} d x = \sqrt{\pi} \label{eq:gaussInt}
 \end{equation}
@@ -113,6 +113,16 @@ An example use of units $\SI{52.3}{\newton}=\SI{52.3}{\kg\per\meter\squared}$.
 
 \begin{equation}
     \frac{\partial^2u}{\partial x^2} = \pdv[2]{u}{x} \label{eq:partialDiffExample}
+\end{equation}
+
+\newcommand{\myvariable}{\gamma}
+
+\begin{align}
+    \myvariable
+\end{align}
+
+\begin{equation}
+    \frac{d ^2u}{\partial x^2} = \pdv[2]{u}{x} \label{eq:partialDiffExample}
 \end{equation}
 
 \section{referencing text}
@@ -162,6 +172,7 @@ Reference managers (and google scholar) will automatically do things like this. 
 \appendix
 
 \section{First appendix}
+
 The numbering of equations and sections changes after the appendix
 \begin{equation}
     e^{i\pi}\equiv-1.

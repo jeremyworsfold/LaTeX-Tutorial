@@ -1,8 +1,10 @@
 ## LaTeX Introduction
 
-<img src="qr-link.png" alt="isolated" width="400"/>
+<img src="qr-link.png" width="300"/>
 
 https://github.com/jeremyworsfold/LaTeX-Tutorial
+
+copy and paste the `.tex` files in LaTeX directory into **www.overleaf.com**
 
 ---
 
@@ -73,6 +75,8 @@ Reference managers can help with `.bib` files but always check them
 ---
 
 ## Report Structure
+
+---
 
 **Introduction**
 - **context**: what is the subject of the paper and what's been done previously? Why is this interesting in Physics?
