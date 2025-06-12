@@ -20,15 +20,18 @@
 %\usepackage{subfigure}
 \usepackage{subfig}
 
-\usepackage{natbib}
-% the style you should use will depend on what is expected. 
+\usepackage{natbib} % this is the package I recommend using or referencing and citations
+% put your references in a `.bib' file (see ref.bib) 
+% this is loaded at the end using the \bibliography{<name>} command
+% how the bibliography looks depends on the style. We can change from the default with the command: 
+\bibliographystyle{unsrtnat} % this is probably a good one to go with
+%\bibliographystyle{unsrt}
+%\bibliographystyle{siam}
+%\bibliographystyle{apsrev4-2}
+% many styles exist and the style you should use will depend on what is expected. 
 % Imagine they want:
 % numbered, square brackets for the citations
 % name of authors, article title, journal name, and DOI if available
-%\bibliographystyle{unsrtnat}
-%\bibliographystyle{unsrt}
-%\bibliographystyle{siam}
-\bibliographystyle{apsrev4-2}
 
 % revtex already loads hyperref but explicit import is needed to make cleveref work
 \usepackage[hidelinks]{hyperref}
