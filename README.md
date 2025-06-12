@@ -5,7 +5,7 @@ It goes at a faster pace than most introductions because it is designed for a ra
 
 The primary goal is to give you the tools to put together aesthetic and robust lab reports with minimal extra formatting required. I'll go over useful tips and packages I use and there's also a `.pdf` that can help you improve the written content too.
 
-LaTeX is incredibly powerful but can also feel overwhelming at first. I recommend using [Overleaf](https://www.overleaf.com) for beginners because of its shortcuts, highlighting and toolbar that with help you get started.
+LaTeX is incredibly powerful but can also feel overwhelming at first. I recommend using [Overleaf](https://www.overleaf.com) for beginners because of its shortcuts, highlighting and toolbar to help you get started.
 
 ## LaTeX Introduction
 
