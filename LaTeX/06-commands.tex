@@ -1,0 +1,63 @@
+\documentclass{article} 
+
+\usepackage{amsmath, amssymb} 
+
+\title{LaTeX Tutorial}
+\author{Jeremy Worsfold}
+\date{\today}
+
+
+% you can define commands in the preamble to make your life easier. For example, if you have a symbol that you use often, you can define a command for it.
+\newcommand{\R}{\mathbb{R}} % this defines a new command \R that will output the symbol for the real numbers.
+% now I can just type \R instead of \mathbb{R} every time I want to use the symbol for the real numbers. This can save a lot of time and make your code cleaner. You can also define commands with arguments, for example:
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % this defines a new command \norm that takes one argument and outputs the norm of that argument. The #1 is a placeholder
+
+\begin{document}
+
+\maketitle
+
+\section{Commands}
+
+Define $x\in \R^d$, $A\in \R^{n\times d}$, $y\in \R^n$. Solve
+\begin{align}
+    x^* = \arg\min_x \norm{Ax-y}_2^2
+\end{align}
+
+% we can also define commands inside the main document, but it's generally better to do it in the preamble so that it's easier to find and edit later.
+\newcommand{\regularization}{\lambda}
+
+\begin{align}
+    x^* = \arg\min_x \norm{Ax-y}_2^2 + \regularization \norm{x}_1
+\end{align}
+
+\newcommand{\pdv}[3][]{\frac{\partial^{#1} #2}{\partial #3^{#1}}} 
+We define a command command takes three arguments: the function we want to differentiate, the variable we want to differentiate with respect to, and the order of the derivative which is optional. If the order of the derivative is not specified, it defaults to 1. For example:
+\begin{align}
+    \pdv{u}{t} = D \pdv[2]{u}{x}
+\end{align}
+
+But you can just use the physics package to do this without defining your own command, it has a built in command that works the same way.
+
+\section{Environments}
+
+You can also define your own environments, for example if you want to define a new type of theorem or definition, you can use the \texttt{amsthm} package and define a new environment for it. For example:
+
+\newenvironment{myboxed}
+{ % this is the code that will be executed when the environment is started
+    \begin{center}
+    \begin{tabular}{|p{0.9\textwidth}|}
+    \hline\\
+}
+{ % this is the code that will be executed when the environment is ended
+    \\\\\hline
+    \end{tabular} 
+    \end{center}
+}
+
+\begin{myboxed}
+    This is a boxed environment. You can put any content you want in here and it will be boxed. You can also define the style of the box by changing the tabular environment. For example, you can change the width of the box by changing the width of the column in the tabular environment, or you can change the color of the box by using the \texttt{color} package and adding a color to the tabular environment.
+\end{myboxed}
+
+While this is just a very brief overview of how commands and environments work in LaTeX, this hopefully gives you more of an idea of how it works and why you need to use commands in specific ways.
+
+\end{document}
